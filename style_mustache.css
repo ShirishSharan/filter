@@ -1,0 +1,63 @@
+body{
+    background-image: url("https://previews.123rf.com/images/yupiramos/yupiramos1804/yupiramos180420081/100197463-hipster-mustache-with-tie-and-sunglasses-pattern-background-vector-illustration-design.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.btn-danger:hover {
+background-color: blue;
+}
+canvas{
+    animation-name:example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes example{
+    from{box-shadow:1px 1px 40px red;}
+    to{box-shadow:1px 1px 40px blue;}
+}
+.loader-wrapper{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #FC354C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0ABFBC, #FC354C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	.loader{
+		display:inline-block;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		border:4px solid blue;
+		animation: loader 2s infinite ease;
+	}
+	.loader-inner {
+		vertical-align: top;
+		display: inline-block;
+		width: 100%;
+		background-color: blue;
+		animation: loader-inner 2s infinite ease-in;
+	  }
+	
+	@keyframes loader {
+		0% { transform: rotate(0deg);}
+		25% { transform: rotate(180deg);}
+		50% { transform: rotate(180deg);}
+		75% { transform: rotate(360deg);}
+		100% { transform: rotate(360deg);}
+	  }
+	  
+	  @keyframes loader-inner {
+		0% { height: 0%;}
+		25% { height: 0%;}
+		50% { height: 100%;}
+		75% { height: 100%;}
+		100% { height: 0%;}
+	  }
